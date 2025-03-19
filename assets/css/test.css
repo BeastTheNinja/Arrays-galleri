@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#carGallery {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    flex-direction: row;
+}
+
+/* Thumbnail billeder */
+#thumbs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+#bigimage, #thumbs{
+    height: 600px;
+    width: 400px;
+    border: 2px solid #333;
+}
+
+#thumbs img {
+    width: 200px;
+    height: 400px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+#thumps img:hover {
+    border-color: #007BFF;
+}
+
+/* Stort billede */
+#bigimage img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* RESPONSIVT DESIGN */
+@media (max-width: 600px) {
+    #carGallery {
+        flex-direction: column;
+    }
+    
+    #thumbs {
+        flex-direction: row;
+    }
+
+    #thumbs img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #bigimage img {
+        width: 100%;
+    }
+}

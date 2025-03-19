@@ -1,1 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* 
+ID: carGallery
+ID: thumps
+Class: imgTile
+ID: bigimage
+ID: big
+ */
+
+ body {
+    background-color: lightgray;
+}
+#carGallery {
+    display: flex;
+    gap: 10px;
+    
+}
+#thumbs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+#bigimage, #thumbs{
+    height: 600px;
+    width: 400px;
+    border: 2px solid #333;
+}
+#thumbs img, #big{
+    cursor: pointer;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#thumbs img:hover {
+    transform: scale(1.1);
+}
+
