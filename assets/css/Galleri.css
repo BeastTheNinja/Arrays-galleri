@@ -36,3 +36,27 @@ ID: big
     transform: scale(1.1);
 }
 
+/* RESPONSIVT DESIGN */
+@media (max-width: 600px) {
+    #carGallery {
+        display: flex;
+        gap: 5px;
+    }
+    
+    #thumbs {
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    }
+
+    #thumbs img {
+        height: 600px;
+        width: 400px;
+        border: 2px solid #333;
+    }
+
+    #bigimage img {
+        width: 100%;
+    }
+}

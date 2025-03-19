@@ -1,15 +1,10 @@
 const thumbs = document.querySelectorAll("#thumbs img");
 const bigImage = document.querySelector("#big");
 
-thumbs.forEach(thumb => {
-    thumb.addEventListener("click", function () {
-        // Gem den store billedes sti midlertidigt
+thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", function (e) {
         let tempSrc = bigImage.src;
-        
-        // Byt billede
-        bigImage.src = this.src;
-        this.src = tempSrc;
+        bigImage.src = e.target.src;
+        e.target.src = tempSrc;
     });
 });
-
-
